@@ -1,7 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:bookly_app/Core/utils/function/launch_custom_url.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:bookly_app/Core/widgets/custom_button.dart';
 import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
 

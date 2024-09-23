@@ -39,8 +39,8 @@ class HomeRepoImpl implements HomeRepo {
   }
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks()async {
-     try {
+  Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() async {
+    try {
       var date = await apiServices.get(
           endPoint: "volumes?Filtering=free-ebooks&q=computer science");
 
@@ -65,14 +65,14 @@ class HomeRepoImpl implements HomeRepo {
       );
     }
   }
-  
-  @override
-  Future<Either<Failure, List<BookModel>>> fetchSimilarBookDetails({required String category}) async{
-    
 
- try {
+  @override
+  Future<Either<Failure, List<BookModel>>> fetchSimilarBookDetails(
+      {required String category}) async {
+    try {
       var date = await apiServices.get(
-          endPoint: "volumes?Sorting=relevance&Filtering=free-ebooks&q=programming");
+          endPoint:
+              "volumes?Sorting=relevance&Filtering=free-ebooks&q=programming");
 
       List<BookModel> books = [];
       for (var item in date["items"]) {
@@ -94,7 +94,5 @@ class HomeRepoImpl implements HomeRepo {
         ),
       );
     }
-
-
   }
 }

@@ -22,13 +22,17 @@ class FeaturedBooksListView extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) {
-                return  Padding(
+                return Padding(
                   padding: const EdgeInsets.only(right: 15),
-                  child: InkWell(onTap: () {
-                      GoRouter.of(context).push(AppRouter.kBookDtails,extra: state.books[index]);
-                  },
-                    
-                    child: ImageBookItem(imageUrl: state.books[index].volumeInfo.imageLinks?.thumbnail??"")) ,
+                  child: InkWell(
+                      onTap: () {
+                        GoRouter.of(context).push(AppRouter.kBookDtails,
+                            extra: state.books[index]);
+                      },
+                      child: ImageBookItem(
+                          imageUrl: state.books[index].volumeInfo.imageLinks
+                                  ?.thumbnail ??
+                              "")),
                 );
               },
             ),

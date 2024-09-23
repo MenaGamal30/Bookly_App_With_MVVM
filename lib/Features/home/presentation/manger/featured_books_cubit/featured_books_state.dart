@@ -12,13 +12,13 @@ final class FeaturedBooksInitial extends FeaturedBooksState {}
 final class FeaturedBooksFailure extends FeaturedBooksState {
   final String errMessage;
 
-  const FeaturedBooksFailure( this.errMessage);
+  const FeaturedBooksFailure(this.errMessage);
 }
 
 final class FeaturedBooksSuccess extends FeaturedBooksState {
   final List<BookModel> books;
 
- const FeaturedBooksSuccess(this.books);
+  const FeaturedBooksSuccess(this.books);
 }
 
 final class FeaturedBooksLoading extends FeaturedBooksState {}

@@ -20,11 +20,12 @@ class SimilarBoookListView extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) {
-                return  Padding(
+                return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 5),
                   child: ImageBookItem(
-                    imageUrl:
-                        state.books[index].volumeInfo.imageLinks?.smallThumbnail??"",
+                    imageUrl: state.books[index].volumeInfo.imageLinks
+                            ?.smallThumbnail ??
+                        "",
                   ),
                 );
               },

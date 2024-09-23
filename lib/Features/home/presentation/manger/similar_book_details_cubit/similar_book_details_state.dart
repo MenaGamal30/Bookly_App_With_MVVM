@@ -20,5 +20,5 @@ final class SimilarBookDetailsSuccess extends SimilarBookDetailsState {
 final class SimilarBookDetailsFailure extends SimilarBookDetailsState {
   final String errorMessage;
 
- const SimilarBookDetailsFailure(this.errorMessage);
+  const SimilarBookDetailsFailure(this.errorMessage);
 }

@@ -1,4 +1,3 @@
-
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:bookly_app/Core/utils/assets.dart';
@@ -23,8 +22,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     super.initState();
     initSlidingAnimation();
     Future.delayed(const Duration(seconds: 1), () {
-     
-       GoRouter.of(context).push(AppRouter.kHomeView);
+      GoRouter.of(context).push(AppRouter.kHomeView);
       // Navigator.push(context, createRoute(child: const HomeView()));
     });
   }

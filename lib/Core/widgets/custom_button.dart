@@ -20,7 +20,7 @@ class CustomButton extends StatelessWidget {
   final BorderRadius? borderRadius;
   final double? fontsize;
   final String text;
-  final  void Function()? onPressed;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {

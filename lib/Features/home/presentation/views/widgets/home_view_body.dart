@@ -9,8 +9,6 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-
     return const SingleChildScrollView(
       physics: BouncingScrollPhysics(),
       child: Padding(
@@ -37,14 +35,6 @@ class HomeViewBody extends StatelessWidget {
         ),
       ),
     );
-
-
-
-
-
-
-
-
 
     // return const CustomScrollView(
     //   physics: BouncingScrollPhysics(),
@@ -73,10 +63,9 @@ class HomeViewBody extends StatelessWidget {
     //         ),
     //       ),
     //     ),
-        
+
     //      SliverToBoxAdapter(child: BestsellerListView()),
-          
-        
+
     //   ],
     // );
   }

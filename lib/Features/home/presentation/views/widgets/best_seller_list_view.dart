@@ -10,8 +10,6 @@ class BestsellerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
     // return ListView.builder(
     //   physics: const NeverScrollableScrollPhysics(),
     //   shrinkWrap: true,
@@ -28,17 +26,19 @@ class BestsellerListView extends StatelessWidget {
       builder: (context, state) {
         if (state is NewestBooksSuccess) {
           return ListView.builder(
-      physics: const NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      padding: EdgeInsets.zero,
-      itemCount: state.books.length,
-      itemBuilder: (context, index) {
-        return  Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10),
-          child: BestSellerItem(book: state.books[index],),
-        );
-      },
-    );
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            padding: EdgeInsets.zero,
+            itemCount: state.books.length,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: BestSellerItem(
+                  book: state.books[index],
+                ),
+              );
+            },
+          );
         } else if (state is NewestBooksFailure) {
           return CustomErrorWidget(errorMessage: state.errMessage);
         } else {
@@ -46,7 +46,5 @@ class BestsellerListView extends StatelessWidget {
         }
       },
     );
-
-   
   }
 }
